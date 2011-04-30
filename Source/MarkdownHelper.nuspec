@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata schemaVersion="2">
+    <id>MarkdownHelper</id>
+    <version>1.1</version>
+    <title>MarkdownHelper</title>
+    <authors>Danny Tuppeny</authors>
+    <owners>Danny Tuppeny</owners>
+    <projectUrl>http://blog.dantup.com/2011/03/an-asp-net-mvc-htmlhelper-extension-method-for-markdown-using-markdownsharp</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>HTML helpers to allow easier rendering of Markdown in an ASP.NET MVC web app:
+
+@Html.Markdown(Model.Body)</description>
+    <summary />
+    <language>en-GB</language>
+    <tags>Markdown</tags>
+    <dependencies>
+      <dependency id="MarkdownDeep.NET" version="1.4" />
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Web" targetFramework=".NETFramework4.0" />
+      <frameworkAssembly assemblyName="System.Web.Mvc" targetFramework=".NETFramework4.0" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

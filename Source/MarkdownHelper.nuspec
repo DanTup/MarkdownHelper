@@ -6,7 +6,7 @@
     <title>MarkdownHelper</title>
     <authors>Danny Tuppeny</authors>
     <owners>Danny Tuppeny</owners>
-    <projectUrl>http://blog.dantup.com/2011/03/an-asp-net-mvc-htmlhelper-extension-method-for-markdown-using-markdownsharp</projectUrl>
+    <projectUrl>http://blog.dantup.com/2011/04/markdownhelper-on-nuget-using-markdowndeep</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>HTML helpers to allow easier rendering of Markdown in an ASP.NET MVC web app:
 

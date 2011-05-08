@@ -7,7 +7,7 @@ namespace DanTup.Web
 	/// <summary>
 	/// Helper class for transforming Markdown.
 	/// </summary>
-	public static class MarkdownHelper
+	public static partial class MarkdownHelper
 	{
 		/// <summary>
 		/// An instance of the Markdown class that performs the transformations.

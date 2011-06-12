@@ -10,9 +10,19 @@ namespace DanTup.Web
 	public static partial class MarkdownHelper
 	{
 		/// <summary>
-		/// An instance of the Markdown class that performs the transformations.
+		/// Transforms a string of Markdown into HTML.
 		/// </summary>
-		static Markdown markdownTransformer = new Markdown();
+		/// <param name="text">The Markdown that should be transformed.</param>
+		/// <returns>The HTML representation of the supplied Markdown.</returns>
+		public static IHtmlString Markdown(string text)
+		{
+			// Transform the supplied text (Markdown) into HTML.
+			var markdownTransformer = new Markdown();
+			string html = markdownTransformer.Transform(text);
+
+			// Wrap the html in an MvcHtmlString otherwise it'll be HtmlEncoded and displayed to the user as HTML :(
+			return new MvcHtmlString(html);
+		}
 
 		/// <summary>
 		/// Transforms a string of Markdown into HTML.
@@ -22,11 +32,8 @@ namespace DanTup.Web
 		/// <returns>The HTML representation of the supplied Markdown.</returns>
 		public static IHtmlString Markdown(this HtmlHelper helper, string text)
 		{
-			// Transform the supplied text (Markdown) into HTML.
-			string html = markdownTransformer.Transform(text);
-
-			// Wrap the html in an MvcHtmlString otherwise it'll be HtmlEncoded and displayed to the user as HTML :(
-			return new MvcHtmlString(html);
+			// Just call the other one, to avoid having two copies (we don't use the HtmlHelper).
+			return Markdown(text);
 		}
 	}
 }
